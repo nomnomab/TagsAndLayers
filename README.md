@@ -22,5 +22,5 @@ string playerTagString = UnityTagName.Get(playerTag); // or UnityTagName.Player
 1. Open the Package Manager from `Window/Package Manager`
 2. Click the '+' button in the top-left of the window
 3. Click 'Add package from git URL'
-4. Provide the URL of this git repository: 'https://github.com/nomnomab/TagsAndLayers.git'
+4. Provide the URL of this git repository: https://github.com/nomnomab/TagsAndLayers.git
 5. Click the 'add' button
