@@ -1,0 +1,20 @@
+{
+  "name": "com.nomnom.tags-and-layers",
+  "version": "1.0.0",
+  "displayName": "Nomnom's Tags And Layers",
+  "description": "This asset allows users to use tags and layers without resorting to using strings for value lookups.",
+  "unity": "2020.3",
+  "unityRelease": "13f1",
+  "keywords": [
+    "nomnom",
+    "tags",
+    "layers",
+    "generated"
+  ],
+  "author": {
+    "name": "Andrew Burke",
+    "email": "nomnomab1@gmail.com"
+  },
+  "type": "library",
+  "hideInEditor": false
+}

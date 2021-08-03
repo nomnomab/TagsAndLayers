@@ -1,0 +1,16 @@
+{
+    "name": "com.nomnom.tagsandlayers.editor",
+    "rootNamespace": "Nomnom.TagsAndLayers.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
