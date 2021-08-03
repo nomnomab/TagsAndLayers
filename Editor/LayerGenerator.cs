@@ -6,11 +6,23 @@ using UnityEngine;
 
 namespace Nomnom.TagsAndLayers.Editor {
 	public sealed class LayerGenerator {
-		private const string pathToFile = "/Plugins/Nomnom's Tags And Layers/GeneratedLayers.cs";
+		private const string PATH_TO_FILE = "/Plugins/Nomnom's Tags And Layers/GeneratedLayers.cs";
+		private string finalPath => Application.dataPath + $"/{PATH_TO_FILE}";
+		
 		private string[] _internalLayers;
 
 		public LayerGenerator() {
-			_internalLayers = new string[0];
+			// check if the generated file exists
+			CheckForDirectories();
+
+			Type ty = Type.GetType($"Nomnom.TagsAndLayers.UnityLayer");
+			if (ty == null) {
+				_internalLayers = new string[0];
+				return;
+			}
+			
+			// type exists, grab enum
+			_internalLayers = Enum.GetNames(ty);
 		}
 
 		public bool RequiresRepaint(string[] values) {
@@ -154,7 +166,15 @@ namespace Nomnom.TagsAndLayers.Editor {
 			content.AppendLine("}");
 
 			string srcCode = content.ToString();
-			string finalPath = Application.dataPath + $"/{pathToFile}";
+
+			CheckForDirectories();
+			
+			File.WriteAllText(finalPath, srcCode);
+			
+			AssetDatabase.Refresh();
+		}
+
+		private void CheckForDirectories() {
 			string pluginsDirectory = Application.dataPath + "/Plugins";
 			string packageDirectory = pluginsDirectory + "/Nomnom's Tags and Layers";
 
@@ -165,8 +185,6 @@ namespace Nomnom.TagsAndLayers.Editor {
 			if (!Directory.Exists(packageDirectory)) {
 				Directory.CreateDirectory(packageDirectory);
 			}
-			
-			File.WriteAllText(finalPath, srcCode);
 			
 			AssetDatabase.Refresh();
 		}
