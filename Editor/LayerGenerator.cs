@@ -158,10 +158,7 @@ namespace Nomnom.TagsAndLayers.Editor {
 			
 			content.AppendLine(string.Empty);
 			content.AppendLine("\t\tpublic static string Get(UnityLayer layer) => _namesLayer[layer];");
-			
-			content.AppendLine(string.Empty);
-			content.AppendLine("\t\tpublic static string Get(UnityLayerMask mask) => _namesMask[mask];");
-			
+
 			content.AppendLine("\t}");
 			content.AppendLine("}");
 
