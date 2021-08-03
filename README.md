@@ -18,7 +18,7 @@ string playerTagString = UnityTagName.Get(playerTag); // or UnityTagName.Player
 ```
 
 # Installation
-## Using Unity Package Manager
+#### Using Unity Package Manager
 1. Open the Package Manager from `Window/Package Manager`
 2. Click the '+' button in the top-left of the window
 3. Click 'Add package from git URL'
