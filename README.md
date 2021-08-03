@@ -1,7 +1,7 @@
 # TagsAndLayers
 This asset allows users to use tags and layers without resorting to using strings for value lookups.
 
-# Usage
+## Usage
 ```cs
 // getting the index of a layer
 UnityLayer uiLayer = UnityLayer.UI;
@@ -17,7 +17,7 @@ UnityTag playerTag = UnityTag.Player;
 string playerTagString = UnityTagName.Get(playerTag); // or UnityTagName.Player
 ```
 
-# Installation
+## Installation
 #### Using Unity Package Manager
 1. Open the Package Manager from `Window/Package Manager`
 2. Click the '+' button in the top-left of the window
