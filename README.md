@@ -1,6 +1,11 @@
 # TagsAndLayers
 This asset allows users to use tags and layers without resorting to using strings for value lookups.
 
+# Known Issues
+- Having a layer with empty slots before it, after index 5, will cause the layers to no longer be synced to their respective index.
+  - e.g. Index 8 is filled, but indicies 6 and 7 are empty.
+  - Index 3 is fine when left empty, this is considered and dealt with internally.
+
 ## Usage
 ```cs
 // getting the index of a layer
