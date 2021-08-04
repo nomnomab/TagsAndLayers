@@ -1,5 +1,5 @@
 {
-    "name": "com.nomnom.tagsandlayers.editor",
+    "name": "com.nomnom.tags-and-layers.editor",
     "rootNamespace": "Nomnom.TagsAndLayers.Editor",
     "references": [],
     "includePlatforms": [
